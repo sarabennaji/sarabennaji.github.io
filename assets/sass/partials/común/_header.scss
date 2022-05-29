@@ -1,0 +1,227 @@
+$corporate_color: #ea4c89;
+$grey:#9e9ea7;
+$transition:.3s ease;
+$light_grey:rgb(231, 231, 231);
+$dark_grey:rgb(119, 119, 119);
+
+.header{
+    width:100%;
+    max-width: 2000px;
+    margin:0 auto;
+
+.notification{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+
+    padding: 0.5rem 0;
+    color: white;
+    font-size:1rem;
+    background-color: black;
+    gap: .5rem;
+
+    position: relative;
+
+ 
+ 
+    .notification_content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 1rem;
+        padding-right: 4rem;
+        padding-left: 4rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        @media screen and (max-width: 900px){     
+            flex-direction: column;
+            text-align: center;    
+            gap: 0rem;
+        }
+      
+    
+
+        .notification_content_white{
+            margin: 0%;
+            line-height: 1.5rem;
+    
+            
+
+        }
+        .notification_content_pink{
+            margin: 0%;
+            
+            color:$corporate_color;
+            font-weight: bold;
+           
+
+        }
+    }
+    .notification_close_button{
+        position: absolute;
+        top:.5rem;
+        right: 1rem;
+        width: auto;
+        height:auto;
+        
+    }
+}
+
+.header_content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+
+   
+   
+
+    .header_left{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        
+
+        .menu_icon{
+            display: none;
+            @media screen and (max-width: 1200px) {              
+               display: flex;  
+            }
+
+            
+        }
+
+    
+        
+        .brand{
+            img{
+                @media screen and (max-width: 600px) {              
+                    width: 130%; 
+                    margin-top: 0rem;   
+        
+                }
+            }
+
+        }
+        .navigation{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            
+            @media screen and (max-width: 1200px) {              
+                display: none;          
+            }
+            
+            
+            .navigation_item{
+                font-weight: 600;
+                color:$dark_grey;
+               
+               ul{
+                   display: flex;
+                   margin:0px;
+                   gap: 2rem;
+                   padding-left: 0px;
+                                
+                   li{
+                   list-style: none;
+                   display: flex;
+                   padding-left: 0%;
+                    }
+               
+                    a{
+                       
+                        text-decoration: none;
+                        color: inherit;
+                        display: flex;
+
+                        &:hover{
+                            color: black;
+                        }
+                      
+                    }
+                }   
+               
+            }
+        }
+    }
+    .header_right{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 600px) {              
+            flex-direction: column;      
+
+        }
+
+        gap: 1rem;
+
+        .secondary_navigation{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            @media screen and (max-width: 600px) {              
+                gap:.5rem;   
+             } 
+            .search{
+                display: flex;
+                
+                img{
+                    display: flex;
+                    position: relative;
+                    bottom: -1px;
+
+                }
+                a {
+                    display: flex;
+                  
+                }
+                
+
+            }
+            .sign_in_sign_up{
+                ul{
+                   
+                    list-style: none;
+                    display: flex;
+                    padding-left: 0px;
+                    gap: 1rem;
+                    margin: 0%;
+
+                    @media screen and (max-width: 600px) {              
+                        gap:.5rem;   
+                     } 
+                }
+                a{
+                    text-decoration: none;
+                    color:inherit;
+                }
+               
+            }
+          
+        }
+
+        .pink_button{
+            @media screen and (max-width: 600px) {              
+               display: none;    
+    
+            } 
+        }
+        
+    }
+}
+
+}

@@ -1,0 +1,103 @@
+$corporate_color: #ea4c89;
+$grey:#9e9ea7;
+$transition:.3s ease;
+$light_grey:rgb(231, 231, 231);
+
+.gallery_02{
+    width:85%;
+    max-width: 1080px;
+    margin: 0 auto;
+
+.past_episodes{
+    margin-top: 4rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.card_body{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+
+   .cards{      
+    .card_image{
+        width:100%;
+        height: 600px;
+        img{
+            width:100%;
+            height:100%;
+            object-fit: cover; 
+            object-position: center;
+            transition: .3s ease;
+
+            &:hover{
+                opacity: 0.5;
+            }
+        }       
+    }
+    .card_text{
+       
+        .episode_number{
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+            color: $grey;
+            font-size: 1rem;
+            font-weight: bold;
+
+        }
+        .card_episode_title{
+            margin-top: .5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            font-size: 1rem;
+
+            a{
+                color:inherit;
+            }
+
+        }
+        .card_episode_description{
+            margin: 0 0 12px;
+        }
+        .read_more{
+            display: flex;
+            gap:.5rem;
+            color:$corporate_color;
+            
+            a{
+                color:inherit;
+            }
+            .arrow{
+                img{
+                    width:10px;
+                }
+            }
+        }
+    }
+   
+    }
+}
+    .card_button{
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        a{
+            background-color: $light_grey;
+            border-radius: 10px;
+            padding: .5rem 1rem;
+            border: 1px solid  $light_grey;
+            color: inherit;
+            transition: .3s ease;
+
+            &:hover{
+                background-color: white;
+                border: 1px solid $grey;
+            }
+        }
+        
+      
+        
+    }
+
+}
+

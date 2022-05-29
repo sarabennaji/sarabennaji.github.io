@@ -1,0 +1,124 @@
+$corporate_color: #ea4c89;
+$grey: #9e9ea7;
+$transition: 0.3s ease;
+$light_grey: rgb(231, 231, 231);
+
+.episode_info {
+    max-width: 1080px;
+    width:85%;
+    margin: 0 auto;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+
+ 
+
+    .episode_type {
+        margin: 0 auto 2.5rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+        @media screen and (max-width: 900px){
+            display: flex;     
+            text-align: center;
+            justify-content: center;          
+    }
+    }
+    .episode_right_left {
+        display: flex;
+        gap: 3rem;
+
+        @media screen and (max-width: 900px){
+            display: flex;  
+            flex-direction: column; 
+            gap:6rem;          
+    }
+
+        @media screen and (max-width: 600px){
+            display: flex;  
+            flex-direction: column; 
+            gap:3rem;          
+    }
+
+        .episode_left {
+           width: 45%;
+
+           @media screen and (max-width: 900px){
+           width: auto;         
+    }
+
+
+            .episode_number {
+                color: $grey;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            .episode_title {
+                margin: 1rem 0;
+                font-weight: bold;
+                font-size: 2rem;
+                line-height: 3rem;
+                
+
+                a {
+                    color: inherit;
+                }
+            }
+            .episode_description {
+         
+            }
+            .read_more {
+                margin-top: 1rem;
+                display: flex;
+                gap: 0.5rem;
+                color: $corporate_color;
+
+                a {
+                    color: inherit;
+                }
+                .arrow {
+                    img {
+                        width: 10px;
+                    }
+                }
+            }
+        }
+        .episode_right {
+            position: relative;
+            z-index: 2;
+
+            a {
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 100%;
+                    object-fit: cover; 
+                    object-position: center;
+
+                
+                }
+            }
+            .pink_div {
+                position: absolute;
+                top: -5rem;
+                right: -8rem;
+                z-index: -1;
+                width: 600px;
+                height: 400px;
+                background-color: $corporate_color;
+
+                @media screen and (max-width: 600px){
+                    display: none;
+                         
+            }
+
+            @media screen and (max-width: 900px){
+                right: -3rem;        
+                width: 500px;
+        }
+
+          
+
+            
+            }
+        }
+    }
+}

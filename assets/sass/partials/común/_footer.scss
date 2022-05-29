@@ -1,0 +1,104 @@
+.footer {
+    background-color: #f9f8fd;
+
+    @media screen and (max-width: 600px) {                 
+        text-align: center;
+    }
+
+    .footer_holder {
+        width:90%;
+        max-width: 1200px;
+        margin:0 auto;
+
+        .footer_content {
+            
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+
+            @media screen and (max-width: 1200px) {              
+                flex-direction: column;
+                flex-wrap: nowrap;           
+            }
+
+
+            .info_dribbble {
+                .footer_brand {
+                }
+                .footer_text {
+                    font-size: 1rem;
+                    line-height: 2rem;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .footer_icons_rrss {
+                    align-items: center;
+                    display: flex;
+                    gap: 1rem;
+                    @media screen and (max-width: 600px) {              
+                        justify-content: center;  
+                     }
+                    img {
+
+                    }
+                }
+            }
+            .footer_menu {
+                display: flex;
+
+                @media screen and (max-width: 900px) {              
+                    display: none;          
+                }
+
+                .list_column {
+                    width: 180px;
+                    margin-right: .5rem;
+
+                    ul {
+                        list-style: none;
+                        padding-left: 0px;
+                        margin-top: 16px;
+                    }
+                    li {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        width: 20ch;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                    .bold_type {
+                        font-weight: bold;
+                    }
+                    .regular_type {
+                    }
+                }
+            }
+        }
+        .footer_extra_info {
+            @media screen and (max-width: 600px) {              
+                flex-direction: column;      
+            }
+
+            display: flex;
+            justify-content: space-between;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+
+            .left {
+            }
+            .right {
+                display: flex;
+                gap: 0.5rem;
+                @media screen and (max-width: 600px) {              
+                   display: flex;
+                   justify-content: center;  
+                }
+    
+            }
+        }
+    }
+}
