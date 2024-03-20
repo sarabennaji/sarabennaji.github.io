@@ -1,0 +1,171 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+
+
+* {
+  //border: 1px solid rgb(41, 28, 159);
+}
+
+:root {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-stretch: wider;
+
+}
+
+html,
+body {
+
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  overflow: hidden;
+  cursor: none; /* Oculta el cursor predeterminado */
+
+}
+#p5-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Permite que los eventos del ratón pasen a través del lienzo */
+  z-index: 9999; /* Asegura que el lienzo esté en la capa superior */
+}
+.portfolio {
+
+
+  .menu {
+
+
+
+    @media (max-width: 1100px) {
+      position: relative;
+      background-color: white;
+      margin-top: 0rem;
+      width: 100%;
+  
+    }
+  
+    position: fixed;
+    left: 0;
+    width: 220px;
+    margin: .5rem;
+    display: grid;
+    /* Añade display: grid aquí */
+    gap: 0.5rem;
+  
+  
+  
+    .menu_img {
+      
+      img {
+      
+        @media (max-width: 1100px) {
+          width: 230px;
+        }
+      
+      }
+  
+  
+    }
+  
+    .menu_text {
+  
+      .menu_name {
+        @media (max-width: 1100px) {
+          font-size: 1.5rem;
+          line-height: 1rem;
+        }
+  
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        line-height: 2rem;
+        font-family: 'Times New Roman',
+        Times,
+        serif;
+        transform: scaleY(1.5);
+      }
+  
+  
+      .menu_item {
+       
+  
+        display: flex;
+        gap: 10px;
+        margin-top: 3rem;
+        line-height: 1.75rem;
+  
+  
+        .icon {
+          img {
+            @media (max-width: 1100px) {
+              max-width: 100%;
+            }
+          }
+        }
+  
+        .label {
+  
+  
+          a {
+            @media (max-width: 1100px) {
+              font-size: 1rem;
+              line-height: 0.5rem;
+  
+            }
+  
+            text-decoration: none;
+            color: black;
+            font-size: 1.75rem;
+            font-family: Arial,
+            Helvetica,
+            sans-serif;
+  
+            &:hover {
+              background-color: rgb(0, 0, 0); // Fondo azul al pasar el cursor sobre el texto
+              color: white; // Texto blanco al pasar el cursor sobre el texto
+            }
+          }
+        }
+  
+      }
+    }
+  }
+
+.about{
+
+  @media (max-width: 1100px) {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    grid-template-columns: 1fr;
+
+  }
+  margin-left: 230px;
+  margin-top: 0.5rem;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+
+  
+
+  
+  .about_text{
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+   
+    .t{
+     margin-top: 2rem;
+    }
+  }
+}
+
+}
+

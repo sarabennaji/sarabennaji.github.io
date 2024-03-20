@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#fafafa" />
+
+    <title>Sara Bennaji</title>
+
+    <meta name="description" content="" />
+    <link rel="apple-touch-icon" href="./assets/img/icon.png" />
+    <link rel="icon" href="./assets/img/cursor.svg" />
+    <link rel="stylesheet" href="./assets/css/about.css" />
+    <link rel="stylesheet" href="./assets/css/about.css.map" />
+    <title>Cursor Trail</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            cursor: none; /* Hide the default cursor */
+        }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+</head>
+
+<body>
+
+    <div class="portfolio">
+       
+        <div class="menu">
+            <div class="menu_img">
+                <img src="/assets/img/hell.jpg" alt="" />
+            </div>
+            <div class="menu_text">
+                <div class="menu_name">SARA BENNAJI</div>
+                <div class="menu_item">
+                    <div class="icon">
+                        <img src="/assets/img/arrow.svg" alt="" />
+                    </div>
+                    <div class="label">
+                        <a href="about.html">ABOUT</a>
+                    </div>
+                </div>
+
+                <div class="menu_item">
+                    <div class="icon">
+                        <img src="/assets/img/arrow.svg" alt="" />
+                    </div>
+                    <div class="label">
+                        <a href="index.html">SELECTED WORK</a>
+                    </div>
+                </div>
+
+                <div class="menu_item">
+                    <div class="icon">
+                        <img src="/assets/img/arrow.svg" alt="" />
+                    </div>
+                    <div class="label">
+                        <a href="about.html">PERSONAL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="about_text">
+                <div class="t">
+                    Estudiante de diseño gráfico en la Escuela Superior de Diseño de Madrid. Enfocada en probar y experimentar en los campos del diseño editorial, branding, ilustración y actualmente programación creativa.
+                </div>
+               
+                <div class="t">
+                    +34 679 731 860
+                </div>
+                <div class="t">
+                    shernandez4080@esdmadrid.es
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <script>
+        // Almacena las posiciones anteriores del cursor
+        let positions = [];
+
+        function setup() {
+            // Crea un lienzo que cubra toda la ventana
+            createCanvas(windowWidth, windowHeight).id('p5-canvas');
+        }
+
+        function draw() {
+            // Limpia el lienzo en cada cuadro
+            clear();
+
+            // Añade la posición actual del cursor al array de posiciones
+            positions.push({ x: mouseX, y: mouseY });
+
+            // Limita la cantidad de posiciones almacenadas para evitar la sobrecarga de memoria
+            if (positions.length > 150) {
+                positions.shift(); // Elimina la posición más antigua
+            }
+
+            // Dibuja el rastro del cursor
+            noFill();
+            stroke(255, 0, 0); // Color rojo para el rastro
+            for (let i = 0; i < positions.length; i++) {
+                drawCross(positions[i].x, positions[i].y);
+            }
+
+            // Dibuja el cursor personalizado
+            noFill();
+            stroke(255, 0, 0); // Color rojo para el cursor
+            strokeWeight(2);
+            drawCross(mouseX, mouseY); // Dibuja una cruz en el cursor actual
+        }
+
+        // Función para dibujar una cruz en la posición (x, y)
+        function drawCross(x, y) {
+            line(x - 10, y, x + 10, y); // Línea horizontal
+            line(x, y - 10, x, y + 10); // Línea vertical
+        }
+    </script>
+</body>
+   
+</body>
+
+
+
+</html>
