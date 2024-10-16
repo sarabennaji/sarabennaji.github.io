@@ -1,0 +1,11 @@
+{
+    "css.lint.emptyRules": "ignore", 
+    "scss.lint.emptyRules": "ignore", 
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/assets/css/"
+        }
+    ]
+}

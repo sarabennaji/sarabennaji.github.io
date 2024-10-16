@@ -1,0 +1,437 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+@import 'partials/menu';
+
+* {
+  //border: 1px solid rgb(41, 28, 159);
+}
+
+:root {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-stretch: wider;
+
+}
+
+html,
+body {
+  margin: 0;
+  //cursor: url('/assets/img/cursor.svg'), auto;
+
+
+
+
+}
+
+.portfolio {
+  margin: 1rem;
+
+}
+
+
+
+
+
+.grid_projects {
+  @media (max-width: 750px) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+
+  }
+
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  margin-left: 200px;
+
+
+  .buttons{
+    .arrows{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      .arrow-left{
+        display: flex;
+        gap: 1rem;
+        .aimg{
+
+        }
+      }
+      .arrow-right{
+        display: flex;
+        gap: 1rem;
+        .aimg{
+          
+        }
+      }
+    }
+  }
+
+
+  .project {
+
+
+    .programming {
+
+      @media (max-width: 750px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+      }
+
+      .pro_box {}
+
+      .box {
+
+
+
+        .p_img {
+
+          display: flex;
+          justify-content: center;
+          margin-bottom: 2rem;
+
+
+        }
+
+        .p_text {
+          font-size: 0.8rem;
+          max-width: 500px;
+          margin: 0 auto;
+          margin-bottom: 4rem;
+
+
+          @media (max-width: 750px) {
+            font-style: 0.9rem;
+
+          }
+
+        }
+      }
+
+      
+      .box_motion {
+
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+   
+        .p_img {
+          max-width: 550px;  // Ancho máximo para el contenedor de imagen
+          width: 100%;       // Asegurarse de que ocupe el 100% del espacio disponible dentro del contenedor
+          img {
+            max-width: 100%; // Asegurarse de que la imagen no exceda el tamaño del contenedor
+            height: auto;    // Mantener las proporciones de la imagen
+          }
+
+        
+      }
+      
+    }
+
+
+
+    }
+
+
+    .project_info {
+      margin-top: 0rem;
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 750px) {
+        display: contents;
+
+      }
+
+      .part1 {
+        margin-right: 4rem;
+
+        .project_title {
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+          transform: scaleY(1.5);
+          font-family: 'Times New Roman', Times, serif;
+          font-stretch: wider;
+
+
+          margin-bottom: 1rem;
+          margin-top: 0.5rem;
+
+          @media (max-width: 750px) {
+            margin-bottom: 0.6rem;
+            margin-top: 0rem;
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+
+          }
+
+        }
+
+        .project_cat {
+          margin-bottom: 1rem;
+          font-size: 1rem;
+          max-width: 300px;
+
+          @media (max-width: 750px) {
+
+            margin-top: 1.5rem;
+
+          }
+
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            line-height: 1rem;
+
+            li {
+              font-size: 0.75rem;
+
+              @media (max-width: 750px) {
+                font-size: 1rem;
+                margin-bottom: 0.25rem;
+
+              }
+            }
+
+          }
+
+
+        }
+      }
+
+      .part2 {
+
+        .lg {
+          margin-top: -0.5rem;
+        }
+
+        .project_desc {
+          @media (max-width: 750px) {
+            margin-top: 2rem;
+
+          }
+
+          margin-bottom: 2rem;
+          max-width: 700px;
+          margin-top: -0.5rem;
+          font-size: 0.9rem;
+
+        }
+      }
+
+
+
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      @media (max-width: 750px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+      }
+
+      img {
+
+        max-width: 100%;
+        height: auto;
+
+
+      }
+
+    }
+
+
+
+    .project_image {
+
+      img {
+
+        width: 100%;
+        /* Ensure the image takes up the full width of its container */
+        min-height: auto;
+        /* Ensure the image takes up the full height of its container */
+        object-fit: cover;
+
+      }
+    }
+
+    .video-container {
+      width: 100%;
+      height: auto;
+      margin-bottom: 3rem;
+      /* Centra el video horizontalmente */
+    }
+
+    video {}
+
+    @media (max-width: 750px) {
+      .video-container {
+        width: 100%;
+        height: auto;
+      }
+
+      video {
+        width: 100%;
+        /* En pantallas pequeñas, ajusta el video al 100% del contenedor */
+        height: auto;
+      }
+    }
+
+
+    .project_image2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 0.5rem;
+
+
+      @media (max-width: 750px) {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+
+
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      img {
+        margin-top: 4rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        max-width: 35%;
+        /* Ensure the image takes up the full width of its container */
+        height: auto;
+
+        /* Ensure the image takes up the full height of its container */
+        //object-fit: cover;
+
+        @media (max-width: 1350px) {
+          //max-width:50%;
+          overflow: hidden;
+        }
+
+        @media (max-width: 750px) {
+          margin: 0rem;
+          margin-top: 0.5rem;
+          max-width: 75%;
+
+        }
+
+        &#ilust {
+          max-width: 25%;
+
+          @media (max-width: 750px) {
+
+            max-width: 50%;
+          }
+        }
+
+        &#setenta {
+          max-width: 70%;
+        }
+
+        &#nty {
+          max-width: 90%;
+        }
+
+        &#margin {
+          margin-bottom: 4rem;
+          margin-top: 0rem;
+
+          @media (max-width: 750px) {
+            margin-bottom: 0rem;
+          }
+
+        }
+
+
+        &#dos {
+          max-width: 50%;
+          margin-top: 0.5rem;
+          margin-right: 0rem;
+          margin-left: 0rem;
+          margin-bottom: 0.5rem;
+
+
+
+          @media (max-width: 1350px) {
+            //max-width:50%;
+            overflow: hidden;
+          }
+
+          @media (max-width: 750px) {
+            margin: 0rem;
+            margin-top: 0.5rem;
+            max-width: 100%;
+          }
+        }
+
+        &#tres {
+          max-width: 33%;
+          margin-top: 0.5rem;
+          margin-right: 0rem;
+          margin-left: 0rem;
+
+          @media (max-width: 1350px) {
+            //max-width:50%;
+            overflow: hidden;
+          }
+
+          @media (max-width: 750px) {
+            margin: 0rem;
+            margin-top: 0.5rem;
+            max-width: 100%;
+          }
+        }
+
+      }
+
+
+    }
+
+
+
+  }
+
+
+
+}

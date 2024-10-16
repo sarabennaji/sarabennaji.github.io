@@ -1,0 +1,82 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+@import 'partials/menu';
+
+* {
+  //border: 1px solid rgb(41, 28, 159);
+}
+
+:root {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-stretch: wider;
+
+}
+
+html,
+body {
+  margin: 0;
+  cursor: url('/assets/img/cursor.svg'), auto;
+  
+
+
+
+}
+
+.portfolio {
+  margin: 1rem;
+}
+
+
+ 
+
+
+.grid_projects {
+
+  @media (max-width: 750px) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+
+  }
+
+
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-left: 320px;
+
+
+
+
+  .project {
+    @media (max-width: 750px) {
+      margin: 1rem;
+    }
+
+    .project_image {
+      
+      img {
+        @media (max-width: 750px) {
+          width: 100%;
+          
+
+      
+        }
+      width: 80%; /* Ensure the image takes up the full width of its container */
+      height: auto; /* Ensure the image takes up the full height of its container */
+      object-fit: cover;
+      }
+    }
+
+    .project_title {}
+  }
+}
