@@ -3595,6 +3595,13 @@ template {
   cursor: ew-resize !important;
   /* cursor horizontal siempre */
 }
+@media (max-width: 1200px) {
+  .grid_projects .project .wrapper_3 .image_container img,
+  .grid_projects .project .wrapper_3 .image_container video {
+    width: 100%;
+    max-height: 500px;
+  }
+}
 @media (max-width: 900px) {
   .grid_projects .project .wrapper_3 .image_container img,
   .grid_projects .project .wrapper_3 .image_container video {
