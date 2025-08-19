@@ -3586,7 +3586,7 @@ template {
 }
 @media (max-width: 900px) {
   .grid_projects .project .wrapper_3 .image_container {
-    height: auto;
+    height: 400px;
   }
 }
 .grid_projects .project .wrapper_3 .image_container video, .grid_projects .project .wrapper_3 .image_container img {
