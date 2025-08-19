@@ -3557,7 +3557,7 @@ template {
 @media (max-width: 750px) {
   .grid_projects {
     margin-left: 0px;
-    margin-top: rem;
+    margin-top: 2rem;
   }
 }
 .grid_projects .project .project_title {
@@ -3587,7 +3587,25 @@ template {
     height: 400px;
   }
 }
-.grid_projects .project .wrapper_3 .image_container img,
+.grid_projects .project .wrapper_3 .image_container img {
+  width: 100%;
+  height: 600px;
+  /* fuerza a llenar todo el contenedor */
+  cursor: ew-resize !important;
+  /* cursor horizontal siempre */
+}
+@media (max-width: 1200px) {
+  .grid_projects .project .wrapper_3 .image_container img {
+    width: 100%;
+    max-height: 500px;
+  }
+}
+@media (max-width: 900px) {
+  .grid_projects .project .wrapper_3 .image_container img {
+    max-height: 400px;
+    height: auto;
+  }
+}
 .grid_projects .project .wrapper_3 .image_container video {
   width: 100%;
   height: 600px;
@@ -3596,14 +3614,12 @@ template {
   /* cursor horizontal siempre */
 }
 @media (max-width: 1200px) {
-  .grid_projects .project .wrapper_3 .image_container img,
   .grid_projects .project .wrapper_3 .image_container video {
     width: 100%;
     max-height: 500px;
   }
 }
 @media (max-width: 900px) {
-  .grid_projects .project .wrapper_3 .image_container img,
   .grid_projects .project .wrapper_3 .image_container video {
     max-height: 400px;
     height: auto;
