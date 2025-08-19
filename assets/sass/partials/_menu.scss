@@ -1,0 +1,216 @@
+$color-primary: #D1D1D1;
+$color-secondary: #EDEDED;
+$color-text: #838383;
+
+
+
+.menu {
+  font-family: 'JetBrainsMono', monospace;
+  z-index: 1;
+  margin: 0;
+  color: $color-text ;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+
+
+  @media (max-width: 750px) {
+    position: relative;
+   
+    flex-direction: row;
+    align-items: start;
+   
+    
+
+    width: 100%;
+
+
+
+  }
+
+  position: fixed;
+  left: 0;
+  width: 190px;
+  display: grid;
+  /* Añade display: grid aquí */
+  gap: 0.5rem;
+
+
+
+  .menu_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.75rem;
+
+    height: auto;
+
+    @media (max-width: 750px) {
+     
+
+
+
+
+
+    }
+
+    img {
+      max-width: 175px;
+      margin-left: -1rem;
+
+      @media (max-width: 750px) {
+        width: 100%;
+        margin-left: -0.75rem;
+        display: none;
+       
+
+
+
+
+
+      }
+
+    }
+
+
+  }
+
+  .menu_text {
+    margin-left: 0.5rem;
+
+    @media (max-width: 750px) {
+
+      margin-bottom: 0rem;
+      margin-left: 0rem;
+
+
+
+    }
+
+
+    .menu_name {
+      margin-bottom: 3rem;
+
+
+
+      @media (max-width: 750px) {
+        margin-bottom: 0rem;
+
+
+      }
+
+      p {
+        @media (max-width: 750px) {
+          font-size: 1.75rem;
+          margin-left: 0rem;
+          margin-bottom: 1rem;
+          margin-top: 0.5rem;
+          text-align: left;
+          line-height: 1.25rem;
+
+
+        }
+
+        margin-top: 1.5rem;
+        font-size: 1.75rem;
+        line-height: 0.25rem;
+        font-family: 'Times New Roman',
+        Times,
+        serif;
+        transform: scaleY(1.5);
+
+
+        a {
+          text-decoration: none;
+          color: $color-text ;
+
+
+
+        }
+      }
+
+
+
+    }
+
+
+    .menu_description {
+      margin-top: -0.25rem;
+
+
+
+    }
+
+
+    .menu_item {
+
+      font-family: 'JetBrainsMono', monospace;
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      background-color: $color-primary;
+      line-height: 0.95rem;
+      margin-bottom: 1.5rem;
+    
+
+
+      &:hover {
+        background-color: rgb(186, 186, 186); // Fondo azul al pasar el cursor sobre el texto
+        color: white; // Texto blanco al pasar el cursor sobre el texto
+      }
+
+
+      @media (max-width: 750px) {
+        margin-left: 0rem;
+
+      }
+
+
+
+      .icon {
+        img {
+          @media (max-width: 750px) {
+            max-width: 100%;
+
+          }
+        }
+      }
+
+      .label {
+
+
+        a {
+
+
+          @media (max-width: 750px) {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+
+          }
+
+          text-decoration: none;
+          color: $color-text ;
+          font-size: 1rem;
+          font-weight: 550;
+
+          padding-left: 0.2rem;
+          padding-right: 0.2rem;
+            
+          
+
+
+          &:hover {
+           
+            color: white; // Texto blanco al pasar el cursor sobre el texto
+          }
+
+
+
+        }
+      }
+
+
+    }
+
+
+  }
+}

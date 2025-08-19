@@ -1,0 +1,127 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+@import 'partials/menu';
+
+* {
+  //border: 1px solid rgb(41, 28, 159);
+}
+
+:root {}
+
+.portfolio {
+  margin: 0.5rem;
+
+
+}
+
+.grid_projects {
+  margin-left: 187px;
+
+  @media (max-width: 750px) {
+    margin-left: 0px;
+    margin-top: rem;
+  }
+
+
+
+
+
+
+
+  .project {
+
+
+
+    .project_title {
+      color: $color-text ;
+      font-size: 1rem;
+      font-weight: 550;
+      background-color: $color-primary;
+      padding-left: 0.2rem;
+      line-height: 0.95;
+
+      font-family: 'JetBrainsMono', monospace;
+
+    }
+
+
+
+
+
+
+
+    .wrapper_3 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0.5rem;
+      background-color: $color-secondary;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+
+
+
+
+
+      .image_container {
+        margin: 0 auto;
+        height: 600px;
+
+        @media (max-width: 900px) {
+          height: 400px;
+      
+         
+         
+        }
+
+        cursor: ew-resize !important;
+
+      
+
+
+        img,
+        video {
+
+
+          width: 100%;
+
+          height: 600px;
+          /* fuerza a llenar todo el contenedor */
+
+
+            @media (max-width: 900px) {
+              max-height: 400px;
+              height: auto;
+          
+         
+        }
+          cursor: ew-resize !important;
+          /* cursor horizontal siempre */
+
+
+
+        }
+
+      }
+
+    }
+
+
+
+
+
+
+    .toggle {
+      cursor: ew-resize !important;
+    }
+
+  }
+
+
+
+
+}
