@@ -47,38 +47,50 @@
 
       .image_container {
         margin: 0 auto;
-        height: 600px;
+        height: 600px; // solo para desktop
         cursor: ew-resize !important;
 
+        // Móvil
         @media (max-width: 900px) {
-          height: auto; // contenedor flexible en móvil
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         video,
         img {
-          width: 100%;
-          height: auto;      // respeta la proporción
-          max-height: 600px; // límite máximo en desktop
-          
+          display: block;
+          width: auto; // deja que la proporción se mantenga
+          max-width: 100%; // nunca exceda el ancho del contenedor
+          height: auto; // respeta proporción
+          max-height: 600px; // desktop máximo
 
           @media (max-width: 1200px) {
             max-height: 500px;
           }
 
-          
+          @media (max-width: 900px) {
+            max-height: 400px; // móvil
+          }
 
           @media (max-width: 600px) {
-            max-height: 600px; // móvil pequeño
+            max-height: 300px; // móvil pequeño
           }
         }
-      } // .image_container
-    } // .wrapper_3
-  } // .project
-} // .grid_projects
+      }
+
+      // .image_container
+    }
+
+    // .wrapper_3
+  }
+
+  // .project
+}
+
+// .grid_projects
 
 .toggle {
   cursor: ew-resize !important;
 }
-
-
-
