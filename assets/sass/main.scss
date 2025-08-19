@@ -86,9 +86,10 @@ body {
 
 
   .project {
+    width: 100%;
     display: flex;
     gap: 0.5rem;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     @media (max-width: 1080px) {
       flex-direction: column;
@@ -106,7 +107,7 @@ body {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      max-width: 50%;
+      width: 100%;
 
       @media (max-width: 1080px) {
         max-width: 100%;

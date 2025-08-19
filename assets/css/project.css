@@ -3658,6 +3658,25 @@ body {
     margin-top: 2rem;
   }
 }
+.grid_projects .project .project_info .part2 .project_desc_esp {
+  font-family: "JetBrainsMono", monospace;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+.grid_projects .project .project_info .part2 .project_desc_esp .language {
+  color: #838383;
+  font-size: 1rem;
+  font-weight: 550;
+  background-color: #D1D1D1;
+  padding-left: 0.2rem;
+  line-height: 0.95;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 750px) {
+  .grid_projects .project .project_info .part2 .project_desc_esp {
+    display: none;
+  }
+}
 .grid_projects .project .wrapper {
   display: flex;
   flex-direction: row;
