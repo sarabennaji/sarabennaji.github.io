@@ -3573,7 +3573,7 @@ template {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 0.5rem;
-  background-color: #EDEDED;
+  background-color: red;
   padding: 0.5rem;
   margin-bottom: 1rem;
 }

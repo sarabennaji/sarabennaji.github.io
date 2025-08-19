@@ -4,12 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
   if (isMobile) {
     document.querySelectorAll(".responsive-video").forEach(video => {
       const source = video.querySelector("source");
-      if (source && source.src.includes("posts/")) {
-        // Reemplazar por la versión "mobile"
+      if (!source) return;
+
+      // Cambiar ruta según la carpeta
+      if (source.src.includes("posts/")) {
         source.src = source.src.replace("posts/", "posts/mobile/");
-        video.load();
-        video.play().catch(() => {});
+      } else if (source.src.includes("motion/")) {
+        source.src = source.src.replace("motion/", "motion/mobile/");
       }
+
+      video.load();
+      video.play().catch(() => {}); // evitar errores si autoplay falla
     });
   }
 });
