@@ -41,30 +41,24 @@
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 0.5rem;
-      background-color: red;
+      background-color: $color-secondary;
       padding: 0.5rem;
       margin-bottom: 1rem;
 
       .image_container {
         margin: 0 auto;
-        height: 600px; // solo para desktop
+        height: 600px;
         cursor: ew-resize !important;
 
-        // Móvil
         @media (max-width: 900px) {
-          height: auto;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          height: auto; // contenedor flexible en móvil
         }
 
         video,
         img {
-          display: block;
-          width: auto; // deja que la proporción se mantenga
-          max-width: 100%; // nunca exceda el ancho del contenedor
-          height: auto; // respeta proporción
-          max-height: 600px; // desktop máximo
+          width: 100%;
+          height: auto;      // respeta la proporción
+          max-height: 600px; // límite máximo en desktop
 
           @media (max-width: 1200px) {
             max-height: 500px;
@@ -78,18 +72,10 @@
             max-height: 300px; // móvil pequeño
           }
         }
-      }
-
-      // .image_container
-    }
-
-    // .wrapper_3
-  }
-
-  // .project
-}
-
-// .grid_projects
+      } // .image_container
+    } // .wrapper_3
+  } // .project
+} // .grid_projects
 
 .toggle {
   cursor: ew-resize !important;

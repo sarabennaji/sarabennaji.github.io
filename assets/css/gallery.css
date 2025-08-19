@@ -3573,7 +3573,7 @@ template {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 0.5rem;
-  background-color: red;
+  background-color: #EDEDED;
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -3585,16 +3585,11 @@ template {
 @media (max-width: 900px) {
   .grid_projects .project .wrapper_3 .image_container {
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 .grid_projects .project .wrapper_3 .image_container video,
 .grid_projects .project .wrapper_3 .image_container img {
-  display: block;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   max-height: 600px;
 }
