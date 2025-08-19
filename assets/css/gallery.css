@@ -3573,7 +3573,7 @@ template {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 0.5rem;
-  background-color: aqua;
+  background-color: #EDEDED;
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -3584,14 +3584,14 @@ template {
 }
 @media (max-width: 900px) {
   .grid_projects .project .wrapper_3 .image_container {
-    height: auto;
+    height: 400px;
   }
 }
 .grid_projects .project .wrapper_3 .image_container video,
 .grid_projects .project .wrapper_3 .image_container img {
   width: 100%;
-  height: auto;
   max-height: 600px;
+  height: 100%;
 }
 @media (max-width: 1200px) {
   .grid_projects .project .wrapper_3 .image_container video,
@@ -3608,7 +3608,7 @@ template {
 @media (max-width: 600px) {
   .grid_projects .project .wrapper_3 .image_container video,
   .grid_projects .project .wrapper_3 .image_container img {
-    max-height: 300px;
+    height: auto;
   }
 }
 
