@@ -8,52 +8,34 @@
 @import 'partials/menu';
 
 * {
-  //border: 1px solid rgb(41, 28, 159);
+  // border: 1px solid rgb(41, 28, 159);
 }
 
 :root {}
 
 .portfolio {
   margin: 0.5rem;
-
-
 }
 
 .grid_projects {
   margin-left: 187px;
 
   @media (max-width: 750px) {
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 2rem;
   }
 
-
-
-
-
-
-
   .project {
 
-
-
     .project_title {
-      color: $color-text ;
+      color: $color-text;
       font-size: 1rem;
       font-weight: 550;
       background-color: $color-primary;
       padding-left: 0.2rem;
       line-height: 0.95;
-
       font-family: 'JetBrainsMono', monospace;
-
     }
-
-
-
-
-
-
 
     .wrapper_3 {
       display: grid;
@@ -63,82 +45,40 @@
       padding: 0.5rem;
       margin-bottom: 1rem;
 
-
-
-
-
       .image_container {
         margin: 0 auto;
         height: 600px;
-
-        @media (max-width: 900px) {
-          height: 400px;
-
-
-
-        }
-
         cursor: ew-resize !important;
 
-        video, img{
-  width: 100%;
-  height: 600px;
+        @media (max-width: 900px) {
+          height: auto; // contenedor flexible en móvil
+        }
 
-  @media (max-width: 1200px) {
-    max-height: 500px;
-  }
+        video,
+        img {
+          width: 100%;
+          height: auto;      // respeta la proporción
+          max-height: 600px; // límite máximo en desktop
+          
 
-  @media (max-width: 900px) {
-    height: auto;   // deja que el navegador calcule según la proporción
-    max-height: 400px;
-  }
+          @media (max-width: 1200px) {
+            max-height: 500px;
+          }
 
-  @media (max-width: 600px) {
-    height: auto;   // móvil
-    max-height: 300px;
-  }
-}
+          
 
-        
-
-
-
-
-
-
-
-      }
-
-
-
-
-
-      cursor: ew-resize !important;
-      /* cursor horizontal siempre */
-
-
-
-    }
-
-
-
-
-
-
-  }
-
-}
-
-
-
-
-
+          @media (max-width: 600px) {
+            max-height: 400px; // móvil pequeño
+          }
+        }
+      } // .image_container
+    } // .wrapper_3
+  } // .project
+} // .grid_projects
 
 .toggle {
   cursor: ew-resize !important;
 }
-
-
 
 
 
