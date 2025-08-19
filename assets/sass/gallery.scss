@@ -65,19 +65,22 @@
     display: block;
     width: auto;        // deja que la proporción se mantenga
     max-width: 100%;    // nunca exceda el ancho del contenedor
-    height: auto;       // respeta proporción
-    max-height: 600px;  // desktop máximo
+    height: 600px;       // respeta proporción
+     // desktop máximo
 
     @media (max-width: 1200px) {
       max-height: 500px;
+      height: auto; // tablet
     }
 
     @media (max-width: 900px) {
       max-height: 400px; // móvil
+       height: auto; // móvil
     }
 
     @media (max-width: 600px) {
       max-height: 300px; // móvil pequeño
+       height: auto; // tablet
     }
   }
 }
