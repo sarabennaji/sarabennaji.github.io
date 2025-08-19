@@ -3602,7 +3602,7 @@ template {
 @media (max-width: 600px) {
   .grid_projects .project .wrapper_3 .image_container video,
   .grid_projects .project .wrapper_3 .image_container img {
-    max-height: 400px;
+    max-height: 600px;
   }
 }
 
