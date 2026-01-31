@@ -1,0 +1,191 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+// PARTIALS
+@import 'partials/menu';
+
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('C:\Users\sarab\Documents\PORTFOLIO 2\portfolioweb2\assets\font\jetbrains\JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  //border: 1px solid rgb(41, 28, 159);
+}
+
+:root {}
+
+html,
+
+body {
+  color: $color-text ;
+  font-family: 'JetBrainsMono', monospace;
+  cursor: none;
+    @media (max-width: 750px) {
+   cursor:default
+  }
+
+}
+
+
+#p5-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  /* Permite que los eventos del ratón pasen a través del lienzo */
+  z-index: 1;
+  /* Asegura que el lienzo esté en la capa superior */
+}
+
+.portfolio {
+  margin: 0.5rem;
+  
+
+  @media (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .about_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+   margin-left: 187px;
+   @media (max-width: 750px) {
+   margin-top: 2rem;
+   margin-left: 0px;
+   height: auto;
+  
+   
+ 
+  }
+   @media (max-width: 900px) {
+     justify-content: start;
+      height: auto;
+  
+    
+
+    }
+  }
+  .about {
+      
+    min-width: 19%;
+    display: flex;
+    /* Utiliza flexbox para alinear verticalmente */
+
+  
+    /* Altura completa del viewport */
+  
+    gap: 0.5rem;
+    
+   
+
+    @media (max-width: 900px) {
+     
+     
+      flex-wrap: wrap;
+      width: 100%;
+
+    }
+
+
+    .about_text {
+      
+      flex-direction: row;
+    
+     
+      font-size: 0.8rem;
+      line-height: 1.1rem;
+      width: 100%;
+      min-width: 19%;
+
+       
+    
+
+      @media (max-width: 750px) {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        min-width: none;
+        
+        
+      }
+
+      .a_title {
+        color: $color-text ;
+        font-size: 1rem;
+        font-weight: 550;
+        background-color: $color-primary;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        line-height: 0.95rem;
+         margin-bottom: 0.5rem;
+      }
+
+      .a_text {
+        display: flex;
+        flex-direction: column;
+       
+          
+   
+      }
+
+      .about_contact {
+    
+        display: flex;
+        flex-direction: column;
+       
+     
+        
+           
+        .t_contact{
+          a{
+            color: $color-text;
+
+             &:hover {
+           color: white;
+            background-color: $color-primary; // Texto blanco al pasar el cursor sobre el texto
+          }
+
+          }
+        
+          
+        }
+      }
+
+    }
+  }
+}
+
+.copy_right {
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0.2rem;
+  width: calc(100% - 1rem); // 100% menos los márgenes laterales
+  margin: 0 0.5rem;
+  margin-bottom: 0.5rem;
+ 
+  
+  background-color: $color-primary;
+
+  @media (max-width: 750px) {
+    font-size: 0.6rem;
+
+  }
+
+}

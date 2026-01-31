@@ -1,0 +1,212 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+@import 'partials/menu';
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('C:\Users\sarab\Documents\PORTFOLIO 2\portfolioweb2\assets\font\jetbrains\JetBrainsMono-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$color-primary: #D1D1D1;
+$color-secondary: #e1e1e1;
+$color-text: #838383;
+
+
+
+* {
+  //border: 1px solid rgb(41, 28, 159);
+}
+
+:root {}
+
+html,
+
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: 'JetBrainsMono', monospace;
+  color: $color-text ;
+
+}
+
+// cursor: url('/assets/img/cursor.svg'), auto;
+
+
+
+
+
+
+
+.portfolio {
+  margin: 0.5rem;
+
+}
+
+
+
+
+
+.grid_projects {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+
+
+  @media (max-width: 750px) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+
+
+
+  }
+
+
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 185px;
+  gap: 0.5rem;
+
+
+
+
+
+
+  .project {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+
+    @media (max-width: 1080px) {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 2rem;
+      justify-content: start;
+
+
+
+
+    }
+
+
+    .project_text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+
+      @media (max-width: 1080px) {
+        max-width: 100%;
+       
+
+      }
+
+      .p_title {
+        color: $color-text ;
+        font-size: 1rem;
+        font-weight: 550;
+        background-color: $color-primary;
+        padding-left: 0.2rem;
+        line-height: 0.95rem;
+
+      }
+
+      .p_description {}
+
+      .p_button {
+         
+       
+        a {
+          background-color: $color-secondary;
+          color: $color-text;
+          padding-left: 0.2rem;
+          padding-right: 0.2rem;
+          
+
+
+        }
+      }
+
+      .p_categpry {}
+
+      .p_collab {
+        color: #C6C6C6;
+        font-weight: 500;
+      }
+
+      .p_year {}
+
+
+    }
+
+    .project_image {
+      position: relative;
+
+
+
+      img {
+        max-width: 400px;
+        height: 100%;
+        object-fit: cover;
+
+
+        @media (max-width: 1400px) {
+          width: 100%;
+          height: auto;
+
+        }
+          @media (max-width: 780px) {
+         max-width: 100%;
+         height: auto;
+
+        }
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.843), rgba(255, 255, 255, 0));
+        /* Ajusta la opacidad y el color según tus preferencias */
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        @media (max-width: 750px) {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0));
+          opacity: 1;
+
+
+        }
+
+
+
+      }
+
+      &:hover .overlay {
+        opacity: 1;
+      }
+    }
+
+    .project_title {}
+  }
+
+}

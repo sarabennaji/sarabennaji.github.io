@@ -1,0 +1,94 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+@import 'partials/menu';
+
+* {
+  // border: 1px solid rgb(41, 28, 159);
+}
+
+:root {}
+
+.portfolio {
+  margin: 0.5rem;
+}
+
+.grid_projects {
+  margin-left: 187px;
+
+  @media (max-width: 750px) {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .project {
+
+    .project_title {
+      color: $color-text;
+      font-size: 1rem;
+      font-weight: 550;
+      background-color: $color-primary;
+      padding-left: 0.2rem;
+      line-height: 0.95;
+      font-family: 'JetBrainsMono', monospace;
+    }
+
+    .wrapper_3 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0.5rem;
+      background-color: $color-secondary; 
+      
+      
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+
+      .image_container {
+  margin: 0 auto;
+  height: 600px; // solo para desktop
+  cursor: ew-resize !important;
+
+  // Móvil
+  @media (max-width: 900px) {
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  video,
+  img {
+    display: block;
+    width: auto;        // deja que la proporción se mantenga
+    max-width: 100%;    // nunca exceda el ancho del contenedor
+    height: 600px;       // respeta proporción
+     // desktop máximo
+
+    @media (max-width: 1200px) {
+      max-height: 500px;
+      height: auto; // tablet
+    }
+
+    @media (max-width: 900px) {
+      max-height: 400px; // móvil
+       height: auto; // móvil
+    }
+
+    @media (max-width: 600px) {
+      max-height: 300px; // móvil pequeño
+       height: auto; // tablet
+    }
+  }
+}
+// .image_container
+    } // .wrapper_3
+  } // .project
+} // .grid_projects
+
+.toggle {
+  cursor: ew-resize !important;
+}
