@@ -3507,12 +3507,15 @@ template {
   margin-top: -0.25rem;
 }
 .menu .menu_text .menu_item {
-  font-family: "JetBrainsMono", monospace;
+  color: #838383;
+  font-size: 0.9rem;
+  font-weight: 550;
+  background-color: #D1D1D1;
+  padding-left: 0.2rem;
+  line-height: 0.9rem;
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
-  background-color: #D1D1D1;
-  line-height: 0.95rem;
   margin-bottom: 1.5rem;
 }
 .menu .menu_text .menu_item:hover {
@@ -3532,10 +3535,6 @@ template {
 .menu .menu_text .menu_item .label a {
   text-decoration: none;
   color: #838383;
-  font-size: 1rem;
-  font-weight: 550;
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
 }
 @media (max-width: 750px) {
   .menu .menu_text .menu_item .label a {
@@ -3636,13 +3635,11 @@ body {
 }
 .portfolio .about .about_text .a_title {
   color: #838383;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 550;
   background-color: #D1D1D1;
   padding-left: 0.2rem;
-  padding-right: 0.2rem;
-  line-height: 0.95rem;
-  margin-bottom: 0.5rem;
+  line-height: 0.9rem;
 }
 .portfolio .about .about_text .a_text {
   display: flex;

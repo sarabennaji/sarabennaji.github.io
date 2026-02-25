@@ -3507,12 +3507,15 @@ template {
   margin-top: -0.25rem;
 }
 .menu .menu_text .menu_item {
-  font-family: "JetBrainsMono", monospace;
+  color: #838383;
+  font-size: 0.9rem;
+  font-weight: 550;
+  background-color: #D1D1D1;
+  padding-left: 0.2rem;
+  line-height: 0.9rem;
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
-  background-color: #D1D1D1;
-  line-height: 0.95rem;
   margin-bottom: 1.5rem;
 }
 .menu .menu_text .menu_item:hover {
@@ -3532,10 +3535,6 @@ template {
 .menu .menu_text .menu_item .label a {
   text-decoration: none;
   color: #838383;
-  font-size: 1rem;
-  font-weight: 550;
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
 }
 @media (max-width: 750px) {
   .menu .menu_text .menu_item .label a {
@@ -3624,12 +3623,11 @@ body {
 }
 .grid_projects .project .project_info .part1 .project_title {
   color: #838383;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 550;
   background-color: #D1D1D1;
   padding-left: 0.2rem;
-  line-height: 0.95;
-  margin-bottom: 0.5rem;
+  line-height: 0.9rem;
 }
 @media (max-width: 750px) {
   .grid_projects .project .project_info .part1 .project_title {
@@ -3820,7 +3818,8 @@ body {
   }
 }
 .grid_projects .project .buttons {
-  line-height: 0.95rem;
+  line-height: 0.9rem;
+  font-size: 0.9rem;
 }
 .grid_projects .project .buttons .arrows {
   display: flex;
