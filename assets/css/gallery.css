@@ -3432,12 +3432,6 @@ template {
   color: #838383;
   font-size: 0.8rem;
   line-height: 1.1rem;
-  position: fixed;
-  left: 0;
-  width: 190px;
-  display: grid;
-  /* Añade display: grid aquí */
-  gap: 0.5rem;
 }
 @media (max-width: 750px) {
   .menu {
@@ -3446,6 +3440,14 @@ template {
     align-items: start;
     width: 100%;
   }
+}
+.menu {
+  position: fixed;
+  left: 0;
+  width: 190px;
+  display: grid;
+  /* Añade display: grid aquí */
+  gap: 0.5rem;
 }
 .menu .menu_img {
   display: flex;
@@ -3482,13 +3484,6 @@ template {
     margin-bottom: 0rem;
   }
 }
-.menu .menu_text .menu_name p {
-  margin-top: 1.5rem;
-  font-size: 1.75rem;
-  line-height: 0.25rem;
-  font-family: "Times New Roman", Times, serif;
-  transform: scaleY(1.5);
-}
 @media (max-width: 750px) {
   .menu .menu_text .menu_name p {
     font-size: 1.75rem;
@@ -3498,6 +3493,13 @@ template {
     text-align: left;
     line-height: 1.25rem;
   }
+}
+.menu .menu_text .menu_name p {
+  margin-top: 1.5rem;
+  font-size: 1.75rem;
+  line-height: 0.25rem;
+  font-family: "Times New Roman", Times, serif;
+  transform: scaleY(1.5);
 }
 .menu .menu_text .menu_name p a {
   text-decoration: none;
@@ -3532,15 +3534,15 @@ template {
     max-width: 100%;
   }
 }
-.menu .menu_text .menu_item .label a {
-  text-decoration: none;
-  color: #838383;
-}
 @media (max-width: 750px) {
   .menu .menu_text .menu_item .label a {
     font-size: 1.2rem;
     line-height: 1.2rem;
   }
+}
+.menu .menu_text .menu_item .label a {
+  text-decoration: none;
+  color: #838383;
 }
 .menu .menu_text .menu_item .label a:hover {
   color: white;
